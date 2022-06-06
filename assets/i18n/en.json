@@ -1,0 +1,133 @@
+{
+  "header": {
+    "support": "24/7 LIVE SUPPORT",
+    "news": "News",
+    "reviews": "Reviews",
+    "contacts": "Contact Us",
+    "start": "How to start",
+    "login": "Sign in",
+    "register": "Create account",
+    "profile": "My profile",
+    "orders": "My orders",
+    "logout": "Log out"
+  },
+  "login": {
+    "signIn": "Sign in",
+    "email": "Email",
+    "password": "Password",
+    "remember": "Remember me on this site",
+    "forgot": "Forgot password?"
+  },
+  "register": {
+    "createAccount": "Create account",
+    "yourEmail": "Your e-mail",
+    "password": "Password",
+    "reenter": "Re-enter password",
+    "agreement": "I agree to <a href=\"/tеrms_of_service/\" target=\"_blank\">User agreement</a> and <a href=\"/privacy_policy/\" target=\"_blank\">AML policy</a>",
+    "slider": {
+      "support": {
+        "title": "24/7 online support",
+        "body": "Наша служба поддержки всегда онлайн и готова ответить на ваши вопросы"
+      },
+      "fast": {
+        "title": "Quick execution of requests",
+        "body": "Наш сервис оптимизирован для быстрого выполнения заявок и мы не останавливаемся на этом"
+      },
+      "team": {
+        "title": "Professional team",
+        "body": "Внушительный опыт, качественный сервис, индивидуальный подход"
+      }
+    }
+  },
+  "forums": {
+    "title": "See reviews about us on forums"
+  },
+  "navigation": {
+    "news": "News",
+    "reviews": "Reviews",
+    "contacts": "Contact Us",
+    "agreement": "User agreement",
+    "aml": "AML policy"
+  },
+  "mainForm": {
+    "step": "STEP",
+    "give": "Give",
+    "get": "Get",
+    "min": "Min",
+    "max": "Max",
+    "reserve": "Reserve",
+    "fullName": "Receiver fullname",
+    "cardNumber": "Card number",
+    "exchange": "Exchange now",
+    "agreement": "By clicking on the \"Exchange\" button, you agree to the\n        <a href=\"/tеrms_of_service\" target=\"_blank\" rel=\"noreferrer noopener\">user agreement</a>\nof our resource"
+  },
+  "pages": {
+    "back": "Back to Main",
+    "userAgreement": {
+      "title": "User agreement",
+      "content": "<h3>\n<p align=\"center\">\nUser Agreement\n</p>\n</h3>\n1. General Provisions<br>\n1.1 This Agreement (hereinafter Agreement) is a written public offer. The Agreement describes the terms and conditions under which services are provided exchange service OpenChange. Getting access to the materials of the Website User accepts this Agreement.<br>\n1.2 The website administration has the right unilaterally to change the terms of this Agreement. Such change become eggective upon posting on Website a new version of the Agreement. In case the User disagrees with the changes, he's obliged to refuse access to the Website and stop using materials and services of the Website.<br>\n<br>\n2. The terms and definitions used is the Agreement<br>\nService OpenChange (Service) – system providing services for exchange, selling and buying e-currencies.<br>\nWebsite Service (Website) - https://openchange.cash<br>\nUser private or legal person using the services of Service OpenChange and implement the acceptenc of the Agreement in accordance with its terms.<br>\nEPS (Electronic Payment System) – website or software developed by third parties, which is a mechanism for implementation of the account of money (e-currencies), and other obligations to pay on the Internet of goods and services, and the organization of settlements between users.<br>\nPayment system the client – a person who has entered into an agreement with the corresponding EPS for the acquisition of property rights claims to it, measured in units adopted in the relevant EPS.<br>\nElectronic currency (e-currency) – cash or other obligation between the developer of the currency and its user, expressed digitally.<br>\nPayment/Transaction – transfer of electronic or different currency from payer to the recipient.<br>\nOrder – an expression of the intention of the User to use one of the services offered by the Service OpenChange, by filling in an electronic form through the Service Website.<br>\nVerification cards (Verificatio) – this a checking card (or account) to it's owner.<br>\nThe terms of the checking sets the Service at a time for each new card(account) of the Client.<br>\n<br>\n3. Subject of the Agreement and the procedure for its entry into force<br>\n3.1. The subject og this Agreement is to provide users of the Service OpenChange following services:<br>\n3.1.1. Electronic currency exchange;<br>\n3.1.2. User electronic currency sales;<br>\n3.1.3. Buying from users of electronic currency.<br>\n3.2. The acceptance of this Agreement made by User in the case of:<br>\n3.2.1. Sending the filled form to perform one of the services offered by the Service;<br>\n3.2.2. Registration on the Website Service.<br>\n3.3. When sending the public offer acceptance Order recognized action of the user performing fill forming Order confirming its intent to commit the transaction to the Service under the conditions proposed by the Service. Date and time of acceptance, as well as the data of the order conditions are recorded automatically by the Service at the time of completion of the order. This Agreement shall enter into force upon receipt by the User of the Service on the details of electronic currency or cash in the amount stipulated by the order data.<br>\n3.4. If you register on the Website Service, Agreement shall enter into force at the time clicking before the words «I agree to User agreement and AML Policy»<br>\n3.5. Terms of the contract is established indefinitely until the termination of the contract on the initiative of one of the parties on the terms specified below.<br>\n<br>\n4. Services and the procedure for their providing<br>\n4.1. The general procedure for the providing of services<br>\n4.1.1. The ordering services by the User by sending a request through the Website Service.<br>\n4.1.3. Service carries request have irrevocable basis in accordance with working conditions corresponding EPS.<br>\n4.1.4. Service is not responsible for the actions of the EPS to its customers. Rights and obligations of the payment system and its customer are governed by the respective terms and conditions of services EPS.<br>\n4.1.5. Using the services of Service OpenChange, the User confirms that legally owns and manages cash and E-currency participating in the respective payment.<br>\n4.1.6. The User undertakes to pay all taxes required under the tax legislation of the location of the User.<br>\n4.2. Services on the exchange of E-currencies.<br>\n4.2.1. Submitting a order on the Website of the Service the User requests, and the Service OpenChange performs actions for the exchange of Electronic currency of one EPS to another E-currency another EPS selected by the User on the Website.<br>\n4.2.2. The user is obliged to transfer the amount of the chosen E-currency, specified in the Order, and the Service, after receiving the relevant currency agrees to transfer the User of the amount of the chosen E-currency, calculated at the Rate and in accordance with the tariffs of the Service.<br>\n4.2.3. The fee of the Service OpenChange indicated in the Order and confirmed by the User when making a request on the Service Website.<br>\n4.2.4. Obligations Of The Service OpenChange on transfer of Electronic money, the User shall be deemed performed at the moment of withdraw of Electronic currency in the respective EPS account the Service OpenChange, indicated in a transaction history of the corresponding EPS.<br>\n4.3. Service for the sale of electronic currency<br>\n4.3.1 Submitting a order on the Website of the Service the User requests, and the Service OpenChange performs actions on the acquisition and transfer of Electronic currency to the User.<br>\n4.3.2. The fee of the Service OpenChange indicated in the Order and confirmed by the User when making a request on the Service Website.<br>\n4.3.3. Within 24 hours of receipt of funds from the User at the rate specified in the Order, the Service OpenChange is obliged to transfer (send) money to the account and in the amount specified by the User in the Order.<br>\n4.3.4 Openchange Service reserved the right to cancel the order placed by the user if payment is not received within 24h from the moment of order creation.4.3.5. Obligations Of The Service OpenChange on transfer of Electronic money, the User shall be deemed performed at the moment of withdraw of Electronic currency in the respective EPS account the Service OpenChange, indicated in a transaction history of the corresponding EPS.<br>\n4.4. Service on the purchase of the User's electronic currency<br>\n4.4.1. Submitting a order on the Website of the Service the User requests, and the Service OpenChange performs actions for the purchase of electronic currency from the User, by transferring the cash equivalent of Electronic currency to the User in the amount specified in the Order.<br>\n4.4.2. Within 24 hours of receipt of funds from the User at the rate specified in the Order, the Service OpenChange is obliged to transfer (send) money to the account and in the amount specified by the User in the Order.4.4.3. The fee of the Service OpenChange indicated in the Order and confirmed by the User when making a request on the Service Website.<br>\n4.4.5. Obligations Of The Service OpenChange on transfer of Electronic money, the User shall be deemed performed at the moment of withdraw of Electronic currency in the respective EPS account the Service OpenChange, indicated in a transaction history of the corresponding EPS.<br>\n<br>\n5. Additional conditions for the provision of services<br>\n5.1. In case of non payment from the User to the Service OpenChange electronic currency or money within 24 hours from the moment of order creation, Service may cancel such an order. Electronic currency or money is received after the above period, shall be returned to the payer's requisites. In the exercise of return, all commission expenses on transfer made from the funds received from the User.<br>\n5.2. In case of receipt from the User to the Service OpenChange electronic currency or money in an amount different from the specified in the Order Service has the right to consider it as available to the user to make a recalculation of the order according to the amount actually received e-currency or unilaterally cancel the order and return the funds received on the payer information. In the exercise of return, all commission expenses on transfer of funds made from the funds received from the User.<br>\n5.3. In the case of non-fulfillment of the Service OpenChange conditions for sending electronic currency or money on the order for the details specified by the user within 24 hours of sending the order, the user has the right to demand the return of electronic currency or cash in full, except in the cases referred to in this agreement. Demand for the return of electronic currency or money may be paid by the Service only if at the time of receipt of such request the cash equivalent has not been sent to the details specified by the User. Longer transfer electronic currency or cash may be caused by order processing conditions for individual EPS, in this case can not be held liable service and refund made.<br>\n5.4. Electronic Currency Rate fastening system not more than 10 minutes from the moment of the Order creation. If the user has made the payment after 10 minutes, the system automatically updates the rate and recalculate amount for receiving.<br>\n<br>\n6. Charges of services<br>\n6.1. Cost of the Service established by the Administration of the Service and shall be published on the Website Service.<br>\n6.2. Service OpenChange is reserved rights to change the electronic currency exchange rates and fees charged at any time, unilaterally and shall notify users of the service pre-deployment information about these changes on the Website Service.<br>\n6.3. In the order which create by user on the Website Service, indicated rate, the fees charged by the relevant EPS for the conduct of operations, the amount of the Service fees, ways of sharing, as well as the total amount of transferred money or electronic currency.<br>\n6.4. Service OpenChange will charge its fee at the moment of the transaction..<br>\n<br>\n7. Liability of the Parties<br>\n7.1. Service OpenChange shall be liable to the User in the amount not exceeding transferred the user's amount of E-currency or cash.<br>\n7.2. Service is not liable for malfunctions, errors or failures in the software and hardware for the operation of the Service OpenChange, caused by reasons beyond the control of Service, as well as the associated loss of the User..<br>\n7.3 Service OpenChange provides services only on an exchange, buying and selling of Electronic currency. Service does not accept payment in favor of any third parties, and also prohibits the transfer to purses that do not belong to the user. Service not enter into any partnership, does not enter into any agreements with the recipients of payments for goods or services.<br>\n7.4. Service OpenChange is not responsible for the User's losses resulting from illegal acts of third parties.<br>\n7.5. The User bears full responsibility for the accuracy of the information provided by him in completing order. If the user does not have or have incorrect personal data or payment data, Service is not responsible for the User's losses incurred as a result of an mistake.<br>\n7.6. The User guarantees that he is not involved in:<br>\n- the operation of money laundering;<br>\n- receive income from drug trafficking;<br>\n- receipt of income from criminal and / or terrorist activities;<br>\n- income from trade with countries with which trade is forbidden by international organizations;<br>\n- income from any other illthgal activity.<br>\n7.7. In case of delayed funds or uncollected funds in the details specified by the User, the fault of the EPS or a bank specified by the User in the order, Service does not bear any responsibility for any damage caused to the User. User agrees that in this case any claims are presented to them for EPS or bank.<br>\n7.8. The parties are relieved from responsibility for partial or complete failure to perform its obligations under the Agreement, if it was the result of force majeure arising after the entry into force of the Agreement, as a result of extraordinary events which could not have been foreseen and prevented by reasonable measures.<br>\n7.10. In other cases, non-performance or improper performance of its obligations under this Agreement shall be liable in accordance with terms and conditions of this Agreement and laws of country of Service OpenChange.<br>\n<br>\n\n8. AML and KYC check<br>\n8.1 The service carries out AML and KYC checks of incoming transactions according to its own algorithms.<br>\n8.2 AML and KYC verification includes the use of specialized services for analyzing cryptocurrency transactions for the presence in their composition of funds that have high risks for the Service. These risks include Dark Service, Dark Market, Illegal Service, Exchange Fraudulent, Scam, Stolen, Gambling, Mixer, Ransom, Sanctions, Child Exploitation and Terrorism Financing.<br>\n8.3 If the analysis of an incoming transaction revealed the presence of these types of high-risk funds and their total percentage was 40% or more, the Service has the right to withhold 10% of the amount of the incoming transaction.<br>\n8.4 The user has the right to receive the results of the check and/or independently verify the correctness of the risk assessment.<br>\n8.5 In the event that a transaction with a total high risk of 40% or more came from the User and the User requests a refund before the execution of the application, then upon returning the Service has the right to withhold 10% of the amount of the incoming transaction.<br>\n<br>\n9. Other conditions<br>\n9.1. Service OpenChange is forbidden to use the Service for fraudelent and illegal transactions.<br>\n9.2. Administration of the Service OpenChange reserves the right to provide payment information to law enforcement and other authorities in accordance with AML Policy.<br>\n9.3. At the request of the Administration of the Service User is obliged to provide documents identifying the person, as well as other information conсerning payments.<br>\n9.4. The user agrees not to violate Service work by interfering with its software or hardware parts.<br>\n9.5. Service OpenChange in the event of suspicious activity in the order process, the User, in order to avoid damage from hacker attacks the right to suspend the execution of such operations to determine the reasons for these actions.<br>\n9.6. Administration of the Service has the absolute right to refuse service to any customer, without explanation.<br>\n<br>\n10. Final conditions<br>\n10.1. The parties have entered into Agreement in the electronic form and recognize it as equivalent to the validity of a contract concluded in writing.<br>\n10.2. Service OpenChange has the right to send the User to a specified e-mail them information about the order status, as well as other information, including advertising.<br>\n10.3. All disputes arising or which may arise from this Agreement shall be resolved through negotiations on the basis of a written order of the User. Either party may seek to resolve the dispute in court at the location of the Service."
+    },
+    "aml": {
+      "title": "AML policy",
+      "content": "<h3 _ngcontent-bhf-c63=\"\">Anti-Money Laundering Policy</h3><p _ngcontent-bhf-c63=\"\"></p><p _ngcontent-bhf-c63=\"\"> Money laundering is the act of converting money or other material values gained from illegal activity (terrorism, drug dealing, illegal arms trade, corruption, human traffic and etc.) into money or investments that appear to be legitimate. Such activity is used because of the illegal source of money and other material values cannot be traced.&nbsp; </p><p _ngcontent-bhf-c63=\"\"> The aim of the anti-money laundering procedures is to guarantee that the clients, participating in financial transactions with the involvement of Openchange.me site, are identified under reasonable standards with the minimum identity data set for the law-abiding clients. Openchange.me has developed the internal anti-money laundering and combating the financing of terrorism policy in accordance with the international legislation requirements. Openchange.me carefully monitors any suspicious actions and transactions and reports such actions to the appropriate authorities in due time. </p><p _ngcontent-bhf-c63=\"\"> Openchange.me documents and verifies identification data of the Client and also logs and tracks itemized statement of all transactions carried out by the Client. </p><p _ngcontent-bhf-c63=\"\"> Openchange.me tracks suspicious transactions of the clients and transactions executed under nonstandard conditions. Openchange.me performs its action on the base of AML FATF recommendations. </p><p _ngcontent-bhf-c63=\"\"> In order to execute the anti-money laundering laws Openchange.me can demand from its Client to present two documents verifying his identity. The first document that can be demanded by Openchange.me is an unexpired identification document that bears a Client’s photograph issued by the jurisdictional government. It can be a passport, a driving license (for the countries where a driving license is a primary identification document) or a local identity card (except an in-company access card). The other document that can be demanded by Openchange.me – is a bill, aged less than three months, containing the full Client’s name and actual address. It can be a bill for housing services, a bank statement or any other document that confirms a Client’s address. In some cases Openchange.me can also request a Client to present notarized copies of the documents. </p><p _ngcontent-bhf-c63=\"\"> The documents written on the languages other than English should be translated into English by a sworn translator; the translation should be typed and signed by a translator and sent enclosed with a copy of an original document that bears a clear Client’s photo. </p><p _ngcontent-bhf-c63=\"\"> Openchange.me reserves the right to refuse to process a transaction at any stage, where it believes the transaction to be connected in any way to money laundering or criminal activity. In accordance with international law Openchange.me is not obliged to inform the Client that it was reported to the corresponding bodies of the Client's suspicious activity. </p><p _ngcontent-bhf-c63=\"\"> Openchange.me is committed to regularly update its electronic system for inspection of suspicious transactions and for verification of client identification records, in accordance with any new regulations as they are promulgated, as well as providing training for its employees on enhancements to anti-money laundering procedures that may be required by new regulations.&nbsp;<span _ngcontent-bhf-c63=\"\" id=\"bx-cursor-node\"></span> &nbsp;&nbsp;<br _ngcontent-bhf-c63=\"\"></p>"
+    },
+    "reviews": "Reviews",
+    "contacts": "Contact us",
+    "user": {
+      "profile": {
+        "title": "My profile",
+        "info": "Personal information",
+        "firstName": "First name",
+        "middleName": "Middle name",
+        "lastName": "Last name",
+        "email": "Email",
+        "city": "City",
+        "country": "Country",
+        "saveChanges": "Save changes",
+        "changePassword": "Change password",
+        "currentPassword": "Current password",
+        "newPassword": "New password",
+        "confirmPassword": "Confirm password",
+        "savePassword": "Save password"
+      },
+      "orders": {
+        "title": "My orders",
+        "noData": "You don't have any orders"
+      },
+      "messages": {
+        "title": "Messages",
+        "noData": "You don't have any messages"
+      }
+    },
+    "howToStart": {
+      "title": "How to start",
+      "content": "<ul class=\"steps-list\">\n\t<div class=\"line\">\n\t\t<div class=\"img\"><img src=\"../../../assets/img/how-to-start/how-to-start-1.jpeg\" alt=\"\"></div>\n\t\t<li>Registration</li>\n\t\t<p>Please follow the steps mentioned below to register your account:<br>1. Provide us with a valid e-mail address and password.<br>2. Follow this by entering your personal information, which comprises of your first, middle, and last names.<br>3. Click on “Create account” button.<br>4. An automated e-mail is sent you, which has the relevant instructions. Kindly follow them to activate your account.</p>\n\t</div>\n\t<div class=\"line\">\n\t\t<div class=\"img\"><img src=\"../../../assets/img/how-to-start/how-to-start-2.jpeg\" alt=\"\"></div>\n\t\t<li>Buying</li>\n\t\t<p>To buy digital currencies like Bitcoin, please proceed with the steps given below:<br>1. Choose the currency you wish to exchange from the list.<br>2. Enter the total sum and then provide your email.<br>3. The transfer fee and service charges will be automatically calculated.<br>4. To continue, click on “Exchange Now”.<br>5. Follow the instructions on the next page.<br>6. Fill in all required fields with the utmost accuracy.<br>7. Pay for your order using one of the specified methods.</p>\n\t</div>\n\t<div class=\"line\">\n\t\t<div class=\"img\"><img src=\"../../../assets/img/how-to-start/how-to-start-3.jpeg\" alt=\"\"></div>\n\t\t<li>Selling</li>\n\t\t<p>To sell, please do as follows.<br>1. Choose desired currency from the list.<br>2. Click exchange now.<br>3. Provide all required and necessary information.<br>4. Transfer the specified amount in Bitcoin or other digital currency.<br>5. Payment can also be made via the merchant interface.</p>\n\t</div>\n</ul>"
+    },
+    "news": "News",
+    "order": {
+      "title": "Order",
+      "dateStart": "Date of creation:",
+      "dateEnd": "Expiration date:",
+      "requisites": "Recipient details:",
+      "timeToPay": "Time for payment:",
+      "status": "Status:",
+      "time": "<b>{{ minutes }}</b> mins <b>{{ seconds }}</b> secs",
+      "payOn": "Pay {{ money }} to:\nbc1qfsfxypf4t80pu4089ap3xazlvajk69xq8q4qur"
+    }
+  },
+  "footer": {
+    "copyright": "© {{year}}, Openchange.cash, All rights reserved"
+  },
+  "order": {
+    "onCheck": "On check",
+    "error": "Error",
+    "completed": "Completed"
+  },
+  "validation": {
+    "wrongCredentials": "Invalid email or password",
+    "required": "This field is required",
+    "email": "Email is not valid",
+    "passwordsDontMatch": "Two passwords are not the same",
+    "serverError": "Something went wrong.. try again later"
+  }
+}
