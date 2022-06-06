@@ -1,0 +1,20 @@
+<section>
+  <div class="container">
+    <div class="account-wrapper">
+      <div class="personal-info">
+        <form class="form">
+          <h3>{{ "pages.user.profile.info" | translate }}</h3>
+
+          <app-input [placeholder]="'pages.user.profile.firstName' | translate"></app-input>
+          <app-input [placeholder]="'pages.user.profile.middleName' | translate"></app-input>
+          <app-input [placeholder]="'pages.user.profile.lastName' | translate"></app-input>
+          <app-input [placeholder]="'pages.user.profile.email' | translate" [disabled]="true" [formControl]="emailControl"></app-input>
+          <app-input [placeholder]="'pages.user.profile.city' | translate"></app-input>
+          <app-input [placeholder]="'pages.user.profile.country' | translate"></app-input>
+
+          <app-button>{{ "pages.user.profile.saveChanges" | translate }}</app-button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

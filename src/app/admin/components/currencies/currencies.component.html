@@ -1,0 +1,9 @@
+<div class="container" [class.loading]="isLoading">
+  <app-currency-item
+    *ngFor="let currency of currencies"
+    [currency]="currency"
+    (currencySaved)="onSaveCurrency($event)"
+    (currencyDeleted)="onDeleteCurrency($event)"
+  ></app-currency-item>
+  <app-button class="button" (click)="addCurrency()">Добавить валюту</app-button>
+</div>

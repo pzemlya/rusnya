@@ -1,0 +1,10 @@
+::ng-deep pagination-controls {
+  & .ngx-pagination .current {
+    background: #30ae41;
+  }
+}
+
+.loading {
+  opacity: 0.5;
+  pointer-events: none;
+}

@@ -1,0 +1,77 @@
+.accordion-heading {
+  cursor: pointer;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+
+  &.arrow {
+    padding-right: 2rem;
+  }
+
+  &.arrow::after {
+    content: '⌃';
+    display: block;
+    position: absolute;
+    width: auto;
+    height: 15px;
+    right: 15px;
+    font-size: 1rem;
+    top: 50%;
+    transform: translateY(-50%) rotateZ(180deg);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &.opened::after {
+    transform: translateY(-50%) rotateZ(0deg);
+  };
+}
+
+.input {
+  display: block;
+  margin-top: 1rem;
+}
+
+.main-currency, .min-max {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 1rem;
+
+  & > .item {
+    flex: 1 0 49%;
+  }
+}
+
+.available-currenices {
+
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .buttons {
+    display: flex;
+
+    .button {
+      display: inline-block;
+      margin: 1rem 1rem 1rem 0;
+
+      &.right {
+        margin: 1rem 0 1rem auto;
+      }
+    }
+  }
+}
+
+h3 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}

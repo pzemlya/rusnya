@@ -1,0 +1,44 @@
+<section>
+  <div class="container" *ngIf="order">
+    <h2>{{ "pages.order.title" | translate }} {{ order._id }}</h2>
+    <div class="exchange_proccess">
+      <table class="table">
+        <tbody>
+        <tr class="pm">
+          <td>{{ order.from.name }}</td>
+          <td>{{ order.to.name }}</td>
+        </tr>
+        <tr class="sum">
+          <td class="longtext">{{ order.from.amount + ' ' + order.from.code }}</td>
+          <td class="longtext">{{ order.to.amount + ' ' + order.to.code }}</td>
+        </tr>
+        <tr class="date">
+          <td>{{ "pages.order.dateStart" | translate }}</td>
+          <td>{{ order.dateStart | date: 'dd.MM.yyyy hh:mm:ss' }}</td>
+        </tr>
+        <tr class="date">
+          <td>{{ "pages.order.dateEnd" | translate }}</td>
+          <td>{{ order.dateEnd | date: 'dd.MM.yyyy hh:mm:ss' }}</td>
+        </tr>
+        <tr>
+          <td>{{ "pages.order.requisites" | translate }}</td>
+          <td><span class="longtext">{{ order.requisites }}</span></td>
+        </tr>
+        <tr>
+          <td>{{ "pages.order.timeToPay" | translate }}</td>
+          <td>
+            <span *ngIf="time" id="exchange_timer" class="text-nowrap"
+                  [innerHTML]="'pages.order.time' | translate: { minutes: time.minutes, seconds: time.seconds }"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>{{ "pages.order.status" | translate }}</td>
+          <td>{{ statusMap[order.status] | translate }}</td>
+        </tr>
+        </tbody>
+      </table>
+      <p
+        class="text-center">{{ "pages.order.payOn" | translate: {money: order.from.amount + ' ' + order.from.code} }}</p>
+    </div>
+  </div>
+</section>

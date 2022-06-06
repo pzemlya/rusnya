@@ -1,0 +1,40 @@
+<app-modal [isOpened]="isOpened" (closed)="setOpenedSignInModal($event)">
+  <form class="content" [formGroup]="form" (ngSubmit)="login()">
+    <h2>{{ "login.signIn" | translate }}</h2>
+
+    <div class="form-group">
+      <app-input [formControlName]="'email'" [placeholder]="'login.email' | translate "></app-input>
+
+      <span class="error" *ngIf="email?.errors?.required && email?.touched">
+        {{ 'validation.required' | translate }}
+      </span>
+
+      <span class="error" *ngIf="email?.errors?.email && email.touched">
+        {{ 'validation.email' | translate }}
+      </span>
+    </div>
+
+    <div class="form-group">
+      <app-input [formControlName]="'password'" [type]="'password'"
+                 [placeholder]="'login.password' | translate "></app-input>
+
+      <span class="error" *ngIf="password?.errors?.required && password?.touched">
+        {{ 'validation.required' | translate }}
+      </span>
+
+      <span class="error" *ngIf="isError">{{ 'validation.wrongCredentials' | translate }}</span>
+    </div>
+
+    <div class="actions">
+      <label>
+        <input type="checkbox" name="remember">
+        <span>{{ "login.remember" | translate }}</span>
+      </label>
+      <app-button [isSubmitType]="true">{{ "login.signIn" | translate }}</app-button>
+    </div>
+
+    <div class="footer">
+      <a href="#" data-target="#recoverPass">Forgot password?</a>
+    </div>
+  </form>
+</app-modal>

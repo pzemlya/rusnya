@@ -1,0 +1,88 @@
+<div class="container">
+  <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form__giving">
+      <span class="form__badge">{{ "mainForm.step" | translate }} 1</span>
+      <h2>{{ "mainForm.give" | translate }}</h2>
+      <app-drop-down
+        [buttonContent]="dropDownGiveBtn"
+        [dropDownContent]="dropDownGiveContent"
+        [opened]="giveOpened"
+        (openToggled)="setGiveOpened($event)"
+      >
+        <ng-template #dropDownGiveBtn>
+          <div class="drop-down__btn">
+            <ng-container *ngIf="selectedGiveCurrency">
+              <div class="currency-item">
+                <img [src]="getCurrencyIconLink(selectedGiveCurrency.iconName)" width="25" height="25" alt="">
+                <p>{{ selectedGiveCurrency.name }}</p>
+              </div>
+            </ng-container>
+          </div>
+        </ng-template>
+        <ng-template #dropDownGiveContent>
+          <div class="drop-down__content">
+            <ul class="currencies">
+              <li class="currency-item" *ngFor="let currency of currencies" (click)="selectGiveCurrency(currency)">
+                <img [src]="getCurrencyIconLink(currency.iconName)" width="25" height="25" alt="">
+                <p>{{ currency.name }}</p>
+              </li>
+            </ul>
+          </div>
+        </ng-template>
+      </app-drop-down>
+      <app-input [formControlName]="'giveCurrency'" [placeholder]="''" [suffixContent]="currencyGiveSuffix" [mask]="'separator.8'">
+        <ng-template #currencyGiveSuffix>{{ selectedGiveCurrency?.code }}</ng-template>
+      </app-input>
+      <p *ngIf="selectedGiveCurrency?.min && selectedGiveCurrency?.max && selectedGetCurrency" class="additional-info">
+        {{ "mainForm.min" | translate }}: {{ selectedGiveCurrency?.min + ' ' + selectedGiveCurrency?.code }}
+        {{ "mainForm.max" | translate }}: {{ selectedGiveCurrency?.max + ' ' + selectedGiveCurrency?.code }}
+        1 {{ selectedGiveCurrency?.code }} = {{ selectedGetCurrency?.rate + ' ' + selectedGetCurrency?.code}}
+      </p>
+      <app-input [placeholder]="'Email'" [formControlName]="'email'"></app-input>
+    </div>
+    <div class="form__getting" [class.form__getting_disabled]="!selectedGetCurrency">
+      <span class="form__badge">{{ "mainForm.step" | translate }} 2</span>
+      <h2>{{ "mainForm.get" | translate }}</h2>
+      <app-drop-down
+        [buttonContent]="dropDownGetBtn"
+        [dropDownContent]="dropDownGetContent"
+        [opened]="getOpened"
+        (openToggled)="setGetOpened($event)"
+      >
+        <ng-template #dropDownGetBtn>
+          <div class="drop-down__btn">
+            <ng-container *ngIf="selectedGetCurrency">
+              <div class="currency-item">
+                <img [src]="getCurrencyIconLink(selectedGetCurrency.iconName)" width="25" height="25" alt="">
+                <p>{{ selectedGetCurrency.name }}</p>
+              </div>
+            </ng-container>
+          </div>
+        </ng-template>
+        <ng-template #dropDownGetContent>
+          <div class="drop-down__content">
+            <ul class="currencies">
+              <li class="currency-item" *ngFor="let currency of selectedGiveCurrency?.availableCurrencies" (click)="selectGetCurrency(currency)">
+                <img [src]="getCurrencyIconLink(currency.iconName)" width="25" height="25" alt="">
+                <p>{{ currency.name }}</p>
+              </li>
+            </ul>
+          </div>
+        </ng-template>
+      </app-drop-down>
+      <app-input [formControlName]="'getCurrency'"  [placeholder]="''" [suffixContent]="currencyGetSuffix" [mask]="'separator.8'">
+        <ng-template #currencyGetSuffix>
+          <ng-container *ngIf="selectedGetCurrency">{{ selectedGetCurrency.code }}</ng-container>
+        </ng-template>
+      </app-input>
+      <p *ngIf="selectedGetCurrency?.reserve" class="additional-info">{{ "mainForm.reserve" | translate }}: {{ selectedGetCurrency?.reserve + ' ' + selectedGetCurrency?.code }}</p>
+      <p *ngIf="selectedGiveCurrency?.message" class="additional-info">
+        {{ selectedGiveCurrency?.message }}
+      </p>
+      <app-input [placeholder]="'mainForm.fullName' | translate" [formControlName]="'fullName'"></app-input>
+      <app-input [placeholder]="'mainForm.cardNumber' | translate" [formControlName]="'cardNumber'" [mask]="'0000 0000 0000 0000'"></app-input>
+      <p class="terms" [innerHTML]="'mainForm.agreement' | translate"></p>
+      <app-button [disabled]="invalid" [fullWidth]="true" [isSubmitType]="true">{{ "mainForm.exchange" | translate }}</app-button>
+    </div>
+  </form>
+</div>

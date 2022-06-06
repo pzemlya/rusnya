@@ -1,0 +1,58 @@
+<ng-container *ngIf="currency">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <accordion>
+      <accordion-group (onOpen)="isOpened = true" (onClose)="isOpened = false" [isOpened]="isOpened">
+        <accordion-heading>
+          <div
+            [class.opened]="isOpened"
+            class="accordion-heading arrow"
+          >
+            <img width="25" height="25" [src]="getCurrencyIconLink(iconName.value)" alt="">
+            <span>{{ name.value + " (" + code.value + ")" }}</span>
+          </div>
+        </accordion-heading>
+
+        <app-input class="input" [formControlName]="CurrencyKeys.iconName" [placeholder]="'Название иконки валюты'"></app-input>
+
+        <div class="main-currency">
+          <div class="item">
+            <app-input [formControlName]="CurrencyKeys.code" [placeholder]="'Код валюты'"></app-input>
+          </div>
+          <div class="item">
+            <app-input [formControlName]="CurrencyKeys.name" [placeholder]="'Название валюты'"></app-input>
+          </div>
+        </div>
+
+        <div class="min-max">
+          <div class="item">
+            <app-input [formControlName]="CurrencyKeys.min" [placeholder]="'Min'"></app-input>
+          </div>
+          <div class="item">
+            <app-input [formControlName]="CurrencyKeys.max" [placeholder]="'Max'"></app-input>
+          </div>
+        </div>
+
+        <app-input class="input" [formControlName]="CurrencyKeys.message" [placeholder]="'Сообщение'"></app-input>
+
+        <h3>Валюты для обмена: </h3>
+        <div class="available-currenices" [formArrayName]="CurrencyKeys.availableCurrencies">
+          <div class="item" *ngFor="let availableCurrency of availableCurrencies.controls; let index = index" [formGroupName]="index">
+            <img width="25" height="25" [src]="getCurrencyIconLink(availableCurrency.get(AvailableCurrencyKeys.iconName)?.value)" alt="">
+            <app-input class="icon-name" [formControlName]="AvailableCurrencyKeys.iconName" [placeholder]="'Название иконки'"></app-input>
+            <app-input class="code" [formControlName]="AvailableCurrencyKeys.code" [placeholder]="'Код валюты'"></app-input>
+            <app-input class="name" [formControlName]="AvailableCurrencyKeys.name" [placeholder]="'Название валюты'"></app-input>
+            <app-input class="rate" [formControlName]="AvailableCurrencyKeys.rate" [placeholder]="'Курс обмена'"></app-input>
+            <app-input class="reserve" [formControlName]="AvailableCurrencyKeys.reserve" [placeholder]="'Резерв'"></app-input>
+            <app-button (click)="deleteAvailableCurrency(index)">Удалить</app-button>
+          </div>
+          <div class="buttons">
+            <app-button class="button" [isSubmitType]="true">Сохранить</app-button>
+            <app-button class="button" (click)="addAvailableCurrency()">Добавить доступную валюту</app-button>
+            <app-button *ngIf="currency?._id" class="button right" (click)="deleteCurrency()">Удалить валюту</app-button>
+          </div>
+        </div>
+
+      </accordion-group>
+    </accordion>
+  </form>
+</ng-container>

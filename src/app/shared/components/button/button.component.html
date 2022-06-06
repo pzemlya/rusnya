@@ -1,0 +1,9 @@
+<button
+  [class.block]="fullWidth"
+  [class.btn-empty]="type === 'secondary'"
+  [disabled]="disabled"
+  [type]="isSubmitType ? 'submit' : 'button'"
+  class="btn"
+>
+  <ng-content></ng-content>
+</button>

@@ -1,0 +1,56 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 1rem;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  margin: 1rem 0;
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  &.warn {
+    background-color: #ffb700;
+    border-color: #ff9900;
+  }
+  &.success {
+    background-color: #17d000;
+    border-color: #15b400;
+  }
+  &.error {
+    background-color: #fd5331;
+    border-color: #fc3912;
+  }
+
+  .from, .to {
+    white-space: nowrap;
+  }
+
+  color: #ffffff;
+}
+
+.status-drop-down {
+  display: block;
+  color: #000;
+}
+.status-btn {
+  padding: 1rem 2rem;
+}
+.status-content {
+
+  p {
+    padding: 0.5rem 2rem;
+
+    &:hover {
+      color: #fff;
+      background-color: #30ae41;
+    }
+  }
+}

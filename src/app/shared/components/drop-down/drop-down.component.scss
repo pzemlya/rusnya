@@ -1,0 +1,56 @@
+.drop-down {
+
+  &__btn {
+    cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+
+    &.bordered {
+      border: 1px solid #eee;
+    }
+
+    &.arrow {
+      padding-right: 2rem;
+    }
+
+    &.arrow::after {
+      content: '⌃';
+      display: block;
+      position: absolute;
+      width: auto;
+      height: 15px;
+      right: 15px;
+      font-size: 1rem;
+      top: 50%;
+      transform: translateY(-50%) rotateZ(180deg);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &.opened::after {
+      transform: translateY(-50%) rotateZ(0deg);
+    }
+
+    &.opened {
+      border-radius: 5px 5px 0 0;
+
+      & .drop-down__content {
+        overflow: hidden;
+        border: 1px solid #eee;
+      }
+    }
+  }
+
+  &__content {
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    right: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+  }
+}

@@ -1,0 +1,15 @@
+<section>
+  <div class="container">
+    <h3 class="text-center">{{ "forums.title" | translate }}</h3>
+    <div class="forum-icons">
+      <a *ngFor="let forum of forums" [href]="forum.url" target="_blank" [style]="'background-image:url(' + forum.imageUrl + ')'">
+        <img [src]="forum.imageUrl" alt="">
+      </a>
+    </div>
+  </div>
+</section>
+<div class="divider">
+  <div class="container">
+    <hr>
+  </div>
+</div>

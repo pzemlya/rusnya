@@ -1,0 +1,42 @@
+.logo {
+  background: url(../../../assets/img/logo.png) -27px top no-repeat;
+  margin: -4px 19px 0 27px;
+  display: inline-block;
+  vertical-align: top;
+  border: 0!important;
+  position: relative;
+  height: 36px;
+  width: 226px;
+  align-self: flex-start;
+}
+.logo:before {
+  -webkit-box-shadow: 0 0 21px -5px rgba(255, 255, 255, 0), inset 0 0 21px -5px rgba(255, 255, 255, 0);
+  box-shadow: 0 0 21px -5px rgba(255, 255, 255, 0), inset 0 0 21px -5px rgba(255, 255, 255, 0);
+  background: url(../../../assets/img/logo.png) left top no-repeat;
+  border-radius: 14px 0 14px 0;
+  position: absolute;
+  height: 27px;
+  width: 27px;
+  content: '';
+  right: 100%;
+  top: 0;
+}
+.logo:after {
+  background: url(../../../assets/img/logo.png) right bottom no-repeat;
+  position: absolute;
+  bottom: -14px;
+  height: 16px;
+  width: 253px;
+  content: '';
+  left: -27px;
+}
+.logo:hover:before {
+  -webkit-animation: logo-rotate 10s infinite linear;
+  -moz-animation: logo-rotate 10s infinite linear;
+  animation: logo-rotate 10s infinite linear;
+}
+.logo:hover:after {
+  -webkit-animation: logo-text 10s infinite linear;
+  -moz-animation: logo-text 10s infinite linear;
+  animation: logo-text 10s infinite linear;
+}

@@ -1,0 +1,19 @@
+<div class="drop-down">
+  <div
+    [style.background]="bgProp ? bgProp : '#ffffff'"
+    [class.arrow]="showArrow"
+    [class.opened]="opened"
+    [class.bordered]="bordered"
+    class="drop-down__btn"
+    (click)="toggleOpened()"
+  >
+    <ng-container *ngIf="buttonContent">
+      <ng-container [ngTemplateOutlet]="buttonContent"></ng-container>
+    </ng-container>
+    <div class="drop-down__content" (click)="preventClose($event)">
+      <ng-container *ngIf="opened && dropDownContent">
+        <ng-container [ngTemplateOutlet]="dropDownContent"></ng-container>
+      </ng-container>
+    </div>
+  </div>
+</div>

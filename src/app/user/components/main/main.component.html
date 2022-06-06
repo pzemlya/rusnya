@@ -1,0 +1,7 @@
+<div class="account-menu">
+  <a [routerLink]="['/user', 'profile']" [routerLinkActive]="'active'">{{ 'pages.user.profile.title' | translate }}</a>
+  <a [routerLink]="['/user', 'orders']" [routerLinkActive]="'active'">{{ 'pages.user.orders.title' | translate }}</a>
+  <a [routerLink]="['/user', 'messages']" [routerLinkActive]="'active'">{{ 'pages.user.messages.title' | translate }}</a>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,37 @@
+.content {
+  width: 83.33333333%;
+  margin-left: 8.33333333%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.long-text-page {
+  font-size: 14px;
+  font-weight: 400;
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  color: #89909b;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 70px;
+  line-height: 20px;
+}
+
+h3 {
+  margin-bottom: 0;
+  color: #4e555d;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+p {
+  line-height: 1.8;
+  margin: 0 0 10px;
+}
+
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}

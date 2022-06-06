@@ -1,0 +1,13 @@
+<div class="container" [class.loading]="isLoading">
+  <app-order-item
+    *ngFor="let order of orders | paginate: { itemsPerPage: 10, currentPage: page }"
+    [order]="order"
+    (statusChanged)="onStatusChange(order._id, $event)"
+  ></app-order-item>
+
+  <div class="text-center">
+    <pagination-controls [nextLabel]="'Назад'" [previousLabel]="'Вперёд'" [autoHide]="true" (pageChange)="onPageChange($event)"></pagination-controls>
+  </div>
+</div>
+
+

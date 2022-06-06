@@ -1,0 +1,28 @@
+<label class="input-wrapper">
+  <input
+    *ngIf="mask; else inputNoMask"
+    [(ngModel)]="value"
+    [type]="type"
+    [placeholder]="placeholder"
+    [class.suffixed]="!!suffixContent"
+    [disabled]="disabled"
+    [mask]="mask"
+    [name]="id"
+    class="input"
+  >
+  <span class="suffix" *ngIf="suffixContent">
+    <ng-container [ngTemplateOutlet]="suffixContent"></ng-container>
+  </span>
+</label>
+
+<ng-template #inputNoMask>
+  <input
+    [(ngModel)]="value"
+    [type]="type"
+    [placeholder]="placeholder"
+    [class.suffixed]="!!suffixContent"
+    [disabled]="disabled"
+    [name]="id"
+    class="input"
+  >
+</ng-template>

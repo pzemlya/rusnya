@@ -1,0 +1,31 @@
+h2 {
+  text-align: center;
+}
+
+.table {
+  margin: 0 auto 1rem;
+
+  tr {
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  td {
+    padding: 0.5rem;
+  }
+
+  td:first-child {
+    text-align: right;
+  }
+  td:last-child {
+    text-align: left;
+  }
+}
+
+.buttons {
+  margin-top: 1rem;
+  text-align: center;
+
+  app-button {
+    margin: 0 1rem;
+  }
+}
