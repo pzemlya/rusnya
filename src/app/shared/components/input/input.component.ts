@@ -34,6 +34,8 @@ export class InputComponent<T> implements ControlValueAccessor {
   @Input() placeholder: string = '';
   @Input() suffixContent: TemplateRef<unknown> | undefined;
   @Input() mask: string | null = null;
+  @Input() thousandSeparator: string = '.';
+  @Input() decimalMarker: '.' | ',' | ['.', ','] = ',';
   @Input() disabled: boolean = false;
 
   @Output() blurTriggered = new EventEmitter<void>();

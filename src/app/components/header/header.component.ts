@@ -34,7 +34,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     const browserLang = this.translate.getBrowserLang();
     const lang =
-      JSON.parse(localStorage.getItem('open-change-language') ?? '') ||
+      JSON.parse(localStorage.getItem('open-change-language') ?? 'null') ||
       this.translate.getDefaultLang();
     this.selectedLanguage = Object.keys(LanguageCodesEnum).includes(browserLang)
       ? browserLang

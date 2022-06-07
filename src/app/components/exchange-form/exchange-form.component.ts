@@ -77,7 +77,6 @@ export class ExchangeFormComponent implements OnInit, OnDestroy {
         debounceTime(50)
       )
       .subscribe((value) => {
-        console.log(value);
         const maxGiveValue = this.selectedGiveCurrency?.max ?? Number.MAX_VALUE;
         const minGiveValue = this.selectedGiveCurrency?.min ?? 0;
         if (value > maxGiveValue) {
@@ -112,7 +111,6 @@ export class ExchangeFormComponent implements OnInit, OnDestroy {
         debounceTime(50)
       )
       .subscribe((value) => {
-        console.log(value);
         const maxGiveValue = this.selectedGiveCurrency?.max ?? Number.MAX_VALUE;
         const reserve = this.selectedGetCurrency?.reserve;
         const rate = this.selectedGetCurrency?.rate;
