@@ -25,11 +25,20 @@
           <td><span class="longtext">{{ order.requisites }}</span></td>
         </tr>
         <tr>
-          <td>{{ "pages.order.timeToPay" | translate }}</td>
-          <td>
-            <span *ngIf="time" id="exchange_timer" class="text-nowrap"
-                  [innerHTML]="'pages.order.time' | translate: { minutes: time.minutes, seconds: time.seconds }"></span>
-          </td>
+          <ng-container [ngSwitch]="order.status">
+            <ng-container *ngSwitchCase="OrderStatus.onCheck">
+              <td>{{ "pages.order.timeToPay" | translate }}</td>
+              <td>
+                <span *ngIf="time; else timeout" id="exchange_timer" class="text-nowrap"
+                      [innerHTML]="'pages.order.time' | translate: { minutes: time.minutes, seconds: time.seconds }"></span>
+              </td>
+
+              <ng-template #timeout>
+                <span *ngIf="!this.interval">{{ 'pages.order.timeout' | translate }}</span>
+              </ng-template>
+            </ng-container>
+
+          </ng-container>
         </tr>
         <tr>
           <td>{{ "pages.order.status" | translate }}</td>
@@ -37,8 +46,18 @@
         </tr>
         </tbody>
       </table>
-      <p
-        class="text-center">{{ "pages.order.payOn" | translate: {money: order.from.amount + ' ' + order.from.code} }}</p>
+      <ng-container *ngIf="order.status === OrderStatus.onCheck">
+        <p *ngIf="wallet"
+           class="text-center">{{ "pages.order.payOn" | translate: {
+          money: order.from.amount + ' ' + order.from.code,
+          wallet: wallet
+        } }}</p>
+        <p *ngIf="!wallet && !isLoadingWallet" class="text-center">{{ "pages.order.badOrder" | translate }}</p>
+      </ng-container>
+
+      <div class="text-center">
+        <app-button (click)="refresh()">{{ "pages.order.refresh" | translate }}</app-button>
+      </div>
     </div>
   </div>
 </section>

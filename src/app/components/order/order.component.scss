@@ -16,6 +16,7 @@ h2 {
   td:first-child {
     text-align: right;
   }
+
   td:last-child {
     text-align: left;
   }
@@ -28,4 +29,8 @@ h2 {
   app-button {
     margin: 0 1rem;
   }
+}
+
+p {
+  margin: 10px 0;
 }

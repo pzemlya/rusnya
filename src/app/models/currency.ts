@@ -8,5 +8,6 @@ export type Currency = {
   min?: number;
   max?: number;
   availableCurrencies?: AvailableCurrency[];
+  wallet?: string;
   message?: string;
 };

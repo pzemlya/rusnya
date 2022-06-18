@@ -71,4 +71,18 @@ export class CurrenciesService {
   public refetchCurrencies(): void {
     this._refetch$.next();
   }
+
+  public getWalletByCurrencyCode$(code: string): Observable<string | null> {
+    return this.http
+      .get<{ wallet: string | null }>(
+        this.baseUrl + '/currencies/wallet/' + code
+      )
+      .pipe(
+        map(({ wallet }) => wallet),
+        catchError((e) => {
+          console.warn(e);
+          return of(null);
+        })
+      );
+  }
 }

@@ -35,6 +35,7 @@ export class CurrencyItemComponent implements OnChanges {
     [CurrencyKeys.name]: new FormControl(null),
     [CurrencyKeys.min]: new FormControl(null),
     [CurrencyKeys.max]: new FormControl(null),
+    [CurrencyKeys.wallet]: new FormControl(null),
     [CurrencyKeys.message]: new FormControl(null),
     [CurrencyKeys.availableCurrencies]: new FormArray([]),
   });
@@ -67,6 +68,7 @@ export class CurrencyItemComponent implements OnChanges {
       name,
       min,
       max,
+      wallet,
       message,
       availableCurrencies,
     } = this.currency ?? {};
@@ -77,6 +79,7 @@ export class CurrencyItemComponent implements OnChanges {
       [CurrencyKeys.name]: name ?? null,
       [CurrencyKeys.min]: min ?? null,
       [CurrencyKeys.max]: max ?? null,
+      [CurrencyKeys.wallet]: wallet ?? null,
       [CurrencyKeys.message]: message ?? null,
     });
 

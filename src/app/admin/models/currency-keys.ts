@@ -6,5 +6,6 @@ export enum CurrencyKeys {
   min = 'min',
   max = 'max',
   message = 'message',
+  wallet = 'wallet',
   availableCurrencies = 'availableCurrencies',
 }

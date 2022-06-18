@@ -112,7 +112,10 @@
       "timeToPay": "Time for payment:",
       "status": "Status:",
       "time": "<b>{{ minutes }}</b> mins <b>{{ seconds }}</b> secs",
-      "payOn": "Pay {{ money }} to:\nbc1qfsfxypf4t80pu4089ap3xazlvajk69xq8q4qur"
+      "payOn": "Pay {{ money }} to:\n{{ wallet }}",
+      "timeout": "Time for payment is up",
+      "badOrder": "The order will be canceled due to technical reasons.",
+      "refresh": "Refresh order"
     }
   },
   "footer": {

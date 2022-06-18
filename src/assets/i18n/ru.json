@@ -112,7 +112,10 @@
       "timeToPay": "Время для оплаты:",
       "status": "Статус:",
       "time": "<b>{{ minutes }}</b> мин. <b>{{ seconds }}</b> сек.",
-      "payOn": "Оплатите {{ money }} на:\nbc1qfsfxypf4t80pu4089ap3xazlvajk69xq8q4qur"
+      "payOn": "Оплатите {{ money }} на:\n{{ wallet }}",
+      "timeout": "Время для оплаты закончилось",
+      "badOrder": "Заявка будет закрытой по техническим причинам.",
+      "refresh": "Обновить заказ"
     }
   },
   "footer": {
