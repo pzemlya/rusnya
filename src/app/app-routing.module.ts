@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './components/main/main.component';
-import { NewsComponent } from './components/news/news.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { UserAgreementComponent } from './components/user-agreement/user-agreement.component';
@@ -13,7 +12,6 @@ import { OrderResolver } from './services/order.resolver';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: MainComponent },
-  { path: 'news', component: NewsComponent },
   { path: 'reviews', component: ReviewsComponent },
   { path: 'contacts', component: ContactComponent },
   { path: 'privacy_policy', component: AmlPolicyComponent },
