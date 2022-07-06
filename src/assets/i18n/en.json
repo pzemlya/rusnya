@@ -57,7 +57,7 @@
     "max": "Max",
     "reserve": "Reserve",
     "fullName": "Receiver fullname",
-    "cardNumber": "Card number",
+    "cardNumber": "{{ wallet }} wallet",
     "exchange": "Exchange now",
     "agreement": "By clicking on the \"Exchange\" button, you agree to the\n        <a href=\"/tеrms_of_service\" target=\"_blank\" rel=\"noreferrer noopener\">user agreement</a>\nof our resource"
   },

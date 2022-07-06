@@ -16,7 +16,8 @@ import { CurrencyKeys } from '../../models/currency-keys';
   styleUrls: ['./currency-item.component.scss'],
 })
 export class CurrencyItemComponent implements OnChanges {
-  private readonly baseIconUrl = 'https://nftoption24.com/img/pm2/';
+  private readonly baseIconUrl =
+    window.location.origin + '/assets/img/svg-icons/';
   private readonly baseIconExtension = '.svg';
 
   @Input() currency: Currency | undefined;

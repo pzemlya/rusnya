@@ -6,6 +6,7 @@ import {
   catchError,
   debounceTime,
   filter,
+  map,
   take,
   takeUntil,
 } from 'rxjs/operators';
@@ -36,7 +37,8 @@ export class ExchangeFormComponent implements OnInit, OnDestroy {
       Validators.pattern(/^[0-9]{16}$/),
     ]),
   });
-  private readonly baseIconUrl = 'https://nftoption24.com/img/pm2/';
+  private readonly baseIconUrl =
+    window.location.origin + '/assets/img/svg-icons/';
   private readonly baseIconExtension = '.svg';
   private onDestroy$ = new Subject<void>();
 
@@ -44,7 +46,9 @@ export class ExchangeFormComponent implements OnInit, OnDestroy {
     private currenciesService: CurrenciesService,
     private ordersService: OrdersService,
     private router: Router
-  ) {}
+  ) {
+    console.log(window.location);
+  }
 
   public get getCurrencyControl(): FormControl {
     return this.form.get('getCurrency') as FormControl;
@@ -67,16 +71,16 @@ export class ExchangeFormComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.setCurrenciesAndPreselectData();
-
-    this.form.valueChanges.subscribe(() => console.log(this.form));
+    this.form.valueChanges.subscribe((value) => console.log(value));
 
     this.giveCurrencyControl.valueChanges
       .pipe(
-        filter((value): value is number => typeof value === 'number'),
-        debounceTime(50)
+        debounceTime(50),
+        map((value) => +value),
+        filter((value): value is number => typeof value === 'number' && !!value)
       )
       .subscribe((value) => {
+        console.log(value);
         const maxGiveValue = this.selectedGiveCurrency?.max ?? Number.MAX_VALUE;
         const minGiveValue = this.selectedGiveCurrency?.min ?? 0;
         if (value > maxGiveValue) {
@@ -105,10 +109,13 @@ export class ExchangeFormComponent implements OnInit, OnDestroy {
         }
       });
 
+    this.setCurrencies();
+
     this.getCurrencyControl.valueChanges
       .pipe(
-        filter((value): value is number => typeof value === 'number'),
-        debounceTime(50)
+        debounceTime(50),
+        map((value) => +value),
+        filter((value): value is number => typeof value === 'number' && !!value)
       )
       .subscribe((value) => {
         const maxGiveValue = this.selectedGiveCurrency?.max ?? Number.MAX_VALUE;
@@ -202,7 +209,7 @@ export class ExchangeFormComponent implements OnInit, OnDestroy {
       });
   }
 
-  private setCurrenciesAndPreselectData() {
+  private setCurrencies() {
     this.currenciesService
       .getCurrencies$()
       .pipe(takeUntil(this.onDestroy$))
@@ -211,7 +218,6 @@ export class ExchangeFormComponent implements OnInit, OnDestroy {
         this.selectedGiveCurrency = this.currencies[0];
         this.selectedGetCurrency =
           this.selectedGiveCurrency?.availableCurrencies?.[0] ?? null;
-        this.giveCurrencyControl.setValue(0);
       });
   }
 }

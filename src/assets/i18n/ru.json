@@ -57,7 +57,7 @@
     "max": "Макс",
     "reserve": "Резерв",
     "fullName": "ФИО Получателя",
-    "cardNumber": "Номер карты",
+    "cardNumber": "{{ wallet }} кошелёк",
     "exchange": "Обменять сейчас",
     "agreement": "При нажатии на кнопку \"Обменять\" Вы соглашаетесь c\n<a href=\"/tеrms_of_service\" target=\"_blank\" rel=\"noreferrer noopener\">пользовательским соглашением</a> нашего ресурса"
   },

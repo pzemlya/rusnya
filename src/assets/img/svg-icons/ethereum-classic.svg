@@ -1,0 +1,19 @@
+<svg version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 150" overflow="scroll" xml:space="preserve">
+<circle fill="#3CC380" cx="75" cy="75" r="75"></circle>
+  <circle fill="#2E2F2F" cx="75" cy="75" r="65"></circle>
+  <g id="Layer_2">
+	<g id="svg8">
+		<g id="layer5">
+			<g id="g1627">
+				<path id="path1599" fill="#3CC380" d="M33.6,81c14.6,7.7,29.8,15.8,41.5,22.1L116.4,81c-14.9,22.2-27.3,40.6-41.2,61
+					C61.3,121.6,46,99.1,33.6,81z M35.2,74.9l40-21.3l39.5,21.2L75.2,96.1L35.2,74.9z M75.2,46.7L33.6,68.5L75,8l41.4,60.7
+					L75.2,46.7z"></path>
+        <path id="path1593" fill="#258A57" d="M75.2,103.1L116.4,81c-14.9,22.2-41.2,61-41.2,61V103.1z M75.2,53.5l39.5,21.2L75.2,96.1
+					V53.5z M75.2,46.7L75,8l41.4,60.7L75.2,46.7z"></path>
+        <path id="path1603" fill="#258A57" d="M35.2,74.9l40,3.3l39.5-3.4L75.2,96.1L35.2,74.9z"></path>
+        <path id="path1606" fill="#187044" d="M75.2,78.1l39.5-3.4L75.2,96.1V78.1z"></path>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

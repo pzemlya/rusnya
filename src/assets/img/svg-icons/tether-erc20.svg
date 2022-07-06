@@ -1,0 +1,8 @@
+<svg version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 150" overflow="scroll" xml:space="preserve">
+<circle fill="#EBEEF6" cx="75" cy="75" r="75"></circle>
+  <circle fill="#3CC380" cx="75" cy="75" r="65"></circle>
+  <path fill="#FFFFFF" d="M83.7,80L83.7,80c-0.5,0-3,0.2-8.6,0.2c-4.5,0-7.7-0.1-8.8-0.2l0,0c-17.3-0.8-30.2-3.8-30.2-7.4
+	S49,66,66.3,65.2V77c1.1,0.1,4.4,0.3,8.9,0.3c5.4,0,8.1-0.2,8.6-0.3V65.2C101.1,66,114,69,114,72.6C113.9,76.2,101,79.2,83.7,80
+	L83.7,80L83.7,80z M83.7,64V53.5h24.1V37.4H42.2v16.1h24.1V64C46.7,64.9,32,68.8,32,73.4s14.7,8.5,34.3,9.4v33.8h17.4V82.8
+	c19.5-0.9,34.3-4.8,34.3-9.4S103.3,64.9,83.7,64L83.7,64L83.7,64z"></path>
+</svg>

@@ -1,0 +1,6 @@
+<svg version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 150" overflow="scroll" xml:space="preserve">
+<circle fill="#231F20" cx="75" cy="75" r="75"></circle>
+  <circle fill="#FFDD2C" cx="75" cy="75" r="65"></circle>
+  <path fill="#231F20" d="M44.3,101.5v13h23.5V129h14.4v-14.5h23.5V97.3H69.3l36.5-49v-13H82.2V21H67.8v14.3H44.3v17.3h36.5
+	L44.3,101.5z"></path>
+</svg>
