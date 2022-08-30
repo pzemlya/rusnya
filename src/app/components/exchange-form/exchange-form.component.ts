@@ -31,11 +31,7 @@ export class ExchangeFormComponent implements OnInit, OnDestroy {
     giveCurrency: new FormControl(null, Validators.required),
     getCurrency: new FormControl(null, Validators.required),
     email: new FormControl(null, [Validators.required, Validators.email]),
-    fullName: new FormControl(null, Validators.required),
-    cardNumber: new FormControl(null, [
-      Validators.required,
-      Validators.pattern(/^[0-9]{16}$/),
-    ]),
+    cardNumber: new FormControl(null, Validators.required),
   });
   private readonly baseIconUrl =
     window.location.origin + '/assets/img/svg-icons/';
@@ -46,9 +42,7 @@ export class ExchangeFormComponent implements OnInit, OnDestroy {
     private currenciesService: CurrenciesService,
     private ordersService: OrdersService,
     private router: Router
-  ) {
-    console.log(window.location);
-  }
+  ) {}
 
   public get getCurrencyControl(): FormControl {
     return this.form.get('getCurrency') as FormControl;
@@ -71,8 +65,6 @@ export class ExchangeFormComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.form.valueChanges.subscribe((value) => console.log(value));
-
     this.giveCurrencyControl.valueChanges
       .pipe(
         debounceTime(50),
@@ -80,7 +72,6 @@ export class ExchangeFormComponent implements OnInit, OnDestroy {
         filter((value): value is number => typeof value === 'number' && !!value)
       )
       .subscribe((value) => {
-        console.log(value);
         const maxGiveValue = this.selectedGiveCurrency?.max ?? Number.MAX_VALUE;
         const minGiveValue = this.selectedGiveCurrency?.min ?? 0;
         if (value > maxGiveValue) {
@@ -172,7 +163,6 @@ export class ExchangeFormComponent implements OnInit, OnDestroy {
       giveCurrency: number;
       getCurrency: number;
       email: string;
-      fullName: string;
       cardNumber: number;
     };
 
@@ -189,7 +179,6 @@ export class ExchangeFormComponent implements OnInit, OnDestroy {
       },
       email: value.email,
       requisites: value.cardNumber.toString(),
-      userName: value.fullName,
     };
 
     this.ordersService
