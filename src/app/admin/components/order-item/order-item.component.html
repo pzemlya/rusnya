@@ -1,43 +1,30 @@
 <ng-container *ngIf="order">
-  <article
-    [ngClass]="{
+    <article [ngClass]="{
       'warn': order.status === OrderStatus.onCheck,
       'error': order.status === OrderStatus.error,
       'success': order.status === OrderStatus.completed
-      }"
-    class="card grid"
-  >
-    <div>{{ order._id }}</div>
-    <span>
-      {{ order.userName }}
-
-      <ng-container *ngIf="order.email"><br> ({{ order.email }})</ng-container>
-    </span>
-    <span>{{ order.requisites }}</span>
-    <span>
+      }" class="card grid">
+        <div>{{ order._id }}</div>
+        <span *ngIf="order.email">{{ order.email }}</span>
+        <span>{{ order.requisites }}</span>
+        <span>
       <span class="from">Отдает {{ order.from.amount }} {{ order.from.name }} ({{order.from.code}})</span>
-      <span>–</span>
-      <span class="to">Получает {{ order.to.amount }} {{ order.to.name }} ({{order.to.code}})</span>
-    </span>
-    <p>Создано: {{ order.dateStart | date:'dd.MM.yyyy hh:mm:ss'}}</p>
-    <p>Статус: </p>
-    <app-drop-down
-      [opened]="isOpened"
-      [buttonContent]="statusBtn"
-      [dropDownContent]="statusContent"
-      (openToggled)="setOpened($event)"
-      class="status-drop-down"
-    >
-      <ng-template #statusBtn>
-        <p class="status-btn">{{ statusMap[order.status] | translate }}</p>
-      </ng-template>
-      <ng-template #statusContent>
-        <div class="status-content">
-          <p *ngFor="let status of statuses" (click)="changeStatus(status)">
-            {{ statusMap[status] | translate }}
-          </p>
-        </div>
-      </ng-template>
-    </app-drop-down>
-  </article>
+        <span>–</span>
+        <span class="to">Получает {{ order.to.amount }} {{ order.to.name }} ({{order.to.code}})</span>
+        </span>
+        <p>Создано: {{ order.dateStart | date:'dd.MM.yyyy hh:mm:ss'}}</p>
+        <p>Статус: </p>
+        <app-drop-down [opened]="isOpened" [buttonContent]="statusBtn" [dropDownContent]="statusContent" (openToggled)="setOpened($event)" class="status-drop-down">
+            <ng-template #statusBtn>
+                <p class="status-btn">{{ statusMap[order.status] | translate }}</p>
+            </ng-template>
+            <ng-template #statusContent>
+                <div class="status-content">
+                    <p *ngFor="let status of statuses" (click)="changeStatus(status)">
+                        {{ statusMap[status] | translate }}
+                    </p>
+                </div>
+            </ng-template>
+        </app-drop-down>
+    </article>
 </ng-container>

@@ -11,5 +11,4 @@ export type CreateOrder = {
   };
   email: string;
   requisites: string;
-  userName: string;
 };

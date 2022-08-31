@@ -15,7 +15,6 @@ import { of, Subject } from 'rxjs';
 import { CreateOrder } from '../../models/create-order';
 import { Router } from '@angular/router';
 import { OrdersService } from '../../services/orders.service';
-
 @Component({
   selector: 'app-exchange-form',
   templateUrl: './exchange-form.component.html',
@@ -31,33 +30,24 @@ export class ExchangeFormComponent implements OnInit, OnDestroy {
     giveCurrency: new FormControl(null, Validators.required),
     getCurrency: new FormControl(null, Validators.required),
     email: new FormControl(null, [Validators.required, Validators.email]),
-    fullName: new FormControl(null, Validators.required),
-    cardNumber: new FormControl(null, [
-      Validators.required,
-      Validators.pattern(/^[0-9]{16}$/),
-    ]),
+    cardNumber: new FormControl(null, Validators.required),
   });
   private readonly baseIconUrl =
     window.location.origin + '/assets/img/svg-icons/';
   private readonly baseIconExtension = '.svg';
   private onDestroy$ = new Subject<void>();
-
   constructor(
     private currenciesService: CurrenciesService,
     private ordersService: OrdersService,
     private router: Router
-  ) {
-    console.log(window.location);
-  }
+  ) {}
 
   public get getCurrencyControl(): FormControl {
     return this.form.get('getCurrency') as FormControl;
   }
-
   public get giveCurrencyControl(): FormControl {
     return this.form.get('giveCurrency') as FormControl;
   }
-
   public get invalid() {
     return (
       this.form.invalid ||
@@ -65,14 +55,11 @@ export class ExchangeFormComponent implements OnInit, OnDestroy {
       !this.selectedGiveCurrency
     );
   }
-
   public getCurrencyIconLink(iconName: string) {
     return this.baseIconUrl + iconName + this.baseIconExtension;
   }
 
   ngOnInit(): void {
-    this.form.valueChanges.subscribe((value) => console.log(value));
-
     this.giveCurrencyControl.valueChanges
       .pipe(
         debounceTime(50),
@@ -80,7 +67,6 @@ export class ExchangeFormComponent implements OnInit, OnDestroy {
         filter((value): value is number => typeof value === 'number' && !!value)
       )
       .subscribe((value) => {
-        console.log(value);
         const maxGiveValue = this.selectedGiveCurrency?.max ?? Number.MAX_VALUE;
         const minGiveValue = this.selectedGiveCurrency?.min ?? 0;
         if (value > maxGiveValue) {
@@ -91,7 +77,6 @@ export class ExchangeFormComponent implements OnInit, OnDestroy {
           this.giveCurrencyControl.setValue(minGiveValue);
           return;
         }
-
         const getCurrencyRate = this.selectedGetCurrency?.rate;
         if (getCurrencyRate) {
           const getCurrencyValue = getCurrencyRate * value;
@@ -108,9 +93,7 @@ export class ExchangeFormComponent implements OnInit, OnDestroy {
           });
         }
       });
-
     this.setCurrencies();
-
     this.getCurrencyControl.valueChanges
       .pipe(
         debounceTime(50),
@@ -128,7 +111,6 @@ export class ExchangeFormComponent implements OnInit, OnDestroy {
             Number.MAX_VALUE
           );
           const newGiveValue = value / rate;
-
           this.giveCurrencyControl.setValue(
             Math.min(newGiveValue, newMaxGiveValue),
             { emitEvent: true }
@@ -136,43 +118,35 @@ export class ExchangeFormComponent implements OnInit, OnDestroy {
         }
       });
   }
-
   public selectGiveCurrency(currency: Currency): void {
     this.selectedGiveCurrency = currency;
     this.selectedGetCurrency = currency.availableCurrencies?.[0] ?? null;
     this.giveOpened = false;
     this.giveCurrencyControl.setValue(0);
   }
-
   public selectGetCurrency(currency: AvailableCurrency): void {
     this.selectedGetCurrency = currency;
     this.getOpened = false;
     this.getCurrencyControl.setValue(0);
   }
-
   public setGiveOpened(opened: boolean) {
     this.giveOpened = opened;
   }
-
   public setGetOpened(opened: boolean) {
     this.getOpened = opened;
   }
-
   ngOnDestroy() {
     this.onDestroy$.next();
     this.onDestroy$.complete();
   }
-
   public onSubmit() {
     if (this.invalid) {
       return;
     }
-
     const value = this.form.value as {
       giveCurrency: number;
       getCurrency: number;
       email: string;
-      fullName: string;
       cardNumber: number;
     };
 
@@ -189,7 +163,6 @@ export class ExchangeFormComponent implements OnInit, OnDestroy {
       },
       email: value.email,
       requisites: value.cardNumber.toString(),
-      userName: value.fullName,
     };
 
     this.ordersService
@@ -208,7 +181,6 @@ export class ExchangeFormComponent implements OnInit, OnDestroy {
         }
       });
   }
-
   private setCurrencies() {
     this.currenciesService
       .getCurrencies$()

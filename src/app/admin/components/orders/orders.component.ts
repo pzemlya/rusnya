@@ -13,27 +13,7 @@ import { Subject } from 'rxjs';
 })
 export class OrdersComponent implements OnInit {
   public page: number = 1;
-  public orders: Order[] = [
-    {
-      _id: '1',
-      from: {
-        code: 'BTC',
-        name: 'Bitcoin',
-        amount: 0.25,
-      },
-      to: {
-        code: 'ETH',
-        name: 'Ethereum',
-        amount: 4.58,
-      },
-      email: 'xyu@gmail.com',
-      userName: 'Хатына Ульяна Йосыповна',
-      requisites: '4441114421151890',
-      dateStart: new Date(),
-      dateEnd: new Date(),
-      status: OrderStatus.onCheck,
-    },
-  ];
+  public orders: Order[] = [];
 
   private onDestroy$ = new Subject<void>();
 

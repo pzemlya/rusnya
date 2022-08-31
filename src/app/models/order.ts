@@ -1,5 +1,4 @@
 import { OrderStatus } from './order-status';
-
 export type Order = {
   _id: string;
   from: {
@@ -14,7 +13,6 @@ export type Order = {
   };
   email: string;
   requisites: string;
-  userName: string;
   status: OrderStatus;
   dateStart: Date;
   dateEnd: Date;
