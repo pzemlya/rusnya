@@ -1,77 +1,71 @@
 <app-modal [isOpened]="isOpened" (closed)="setOpenedSignInModal($event)">
-  <div class="modal-content">
-    <form class="content" [formGroup]="form" *ngIf="form" (ngSubmit)="register()">
-      <h2>{{ "register.createAccount" | translate }}</h2>
+    <div class="modal-content">
+        <form class="content" [formGroup]="form" *ngIf="form" (ngSubmit)="register()">
+            <h2>{{ "register.createAccount" | translate }}</h2>
 
-      <div class="form-group">
-        <app-input [formControlName]="'email'" [placeholder]="'register.yourEmail' | translate "></app-input>
+            <div class="form-group">
+                <app-input [formControlName]="'email'" [placeholder]="'register.yourEmail' | translate "></app-input>
 
-        <span class="error" *ngIf="email?.errors?.required && email?.touched">
+                <span class="error" *ngIf="email?.errors?.required && email?.touched">
           {{ 'validation.required' | translate }}
         </span>
 
-        <span class="error" *ngIf="email?.errors?.email && email.touched">
+                <span class="error" *ngIf="email?.errors?.email && email.touched">
           {{ 'validation.email' | translate }}
         </span>
-      </div>
+            </div>
 
 
 
-      <div class="form-group">
-        <app-input [formControlName]="'password'" [placeholder]="'register.password' | translate "
-                   [type]="'password'"></app-input>
+            <div class="form-group">
+                <app-input [formControlName]="'password'" [placeholder]="'register.password' | translate " [type]="'password'"></app-input>
 
-        <span class="error" *ngIf="password?.errors?.required && password?.touched">
+                <span class="error" *ngIf="password?.errors?.required && password?.touched">
           {{ 'validation.required' | translate }}
         </span>
-      </div>
+            </div>
 
-      <div class="form-group">
-        <app-input [formControlName]="'repeatPassword'" [placeholder]="'register.reenter' | translate "
-                   [type]="'password'"></app-input>
+            <div class="form-group">
+                <app-input [formControlName]="'repeatPassword'" [placeholder]="'register.reenter' | translate " [type]="'password'"></app-input>
 
-        <span class="error" *ngIf="repeatPassword?.errors?.required && repeatPassword?.touched">
+                <span class="error" *ngIf="repeatPassword?.errors?.required && repeatPassword?.touched">
           {{ 'validation.required' | translate }}
         </span>
 
-        <span class="error" *ngIf="repeatPassword?.errors?.matchPasswords && repeatPassword.touched">
+                <span class="error" *ngIf="repeatPassword?.errors?.matchPasswords && repeatPassword.touched">
           {{ 'validation.passwordsDontMatch' | translate }}
         </span>
-      </div>
+            </div>
 
-      <div class="form-group">
-        <label>
+            <div class="form-group">
+                <label>
           <input type="checkbox" name="remember" [formControlName]="'agreement'">
           <span [innerHTML]="'register.agreement' | translate"></span>
         </label>
 
-        <span class="error" *ngIf="agreement?.errors?.required && agreement.touched">
+                <span class="error" *ngIf="agreement?.errors?.required && agreement.touched">
           {{ 'validation.required' | translate }}
         </span>
 
-        <span class="error" *ngIf="isError">
+                <span class="error" *ngIf="isError">
           {{ 'validation.serverError' | translate }}
         </span>
-      </div>
+            </div>
 
-      <app-button [fullWidth]="true" [isSubmitType]="true">{{ "register.createAccount" | translate }}</app-button>
-    </form>
-    <div class="slider">
-      <div class="slides" [style.--currentSlide]="currentSlide">
-        <div
-          *ngFor="let slide of sliderInfo; let index = index"
-          class="slide"
-        >
-          <img height="115" [src]="'../../../assets/img/slider/' + slide.imgName" alt="{{slide.imgName}}">
-          <div class="title">{{ slide.titleKey | translate }}</div>
-          <p>{{ slide.bodyKey | translate }}</p>
+            <app-button [fullWidth]="true" [isSubmitType]="true">{{ "register.createAccount" | translate }}</app-button>
+        </form>
+        <div class="slider">
+            <div class="slides" [style.--currentSlide]="currentSlide">
+                <div *ngFor="let slide of sliderInfo; let index = index" class="slide">
+                    <img height="115" [src]="'../../../assets/img/slider/' + slide.imgName" alt="{{slide.imgName}}">
+                    <div class="title">{{ slide.titleKey | translate }}</div>
+                    <p>{{ slide.bodyKey | translate }}</p>
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="button" [class.active]="currentSlide === index" *ngFor="let slide of sliderInfo; let index = index" (click)="setActiveSlide(index)">&nbsp;
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="buttons">
-        <div class="button" [class.active]="currentSlide === index" *ngFor="let slide of sliderInfo; let index = index"
-             (click)="setActiveSlide(index)">&nbsp;
-        </div>
-      </div>
     </div>
-  </div>
 </app-modal>

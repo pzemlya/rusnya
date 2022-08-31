@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://rusnya-api.herokuapp.com',
+  apiUrl: 'http://localhost:4001',
 };
 
 /*

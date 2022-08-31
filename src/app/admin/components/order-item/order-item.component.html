@@ -8,7 +8,11 @@
     class="card grid"
   >
     <div>{{ order._id }}</div>
-    <span *ngIf="order.email">{{ order.email }}</span>
+    <span>
+      {{ order.userName }}
+
+      <ng-container *ngIf="order.email"><br> ({{ order.email }})</ng-container>
+    </span>
     <span>{{ order.requisites }}</span>
     <span>
       <span class="from">Отдает {{ order.from.amount }} {{ order.from.name }} ({{order.from.code}})</span>

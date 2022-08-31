@@ -54,20 +54,20 @@
           selectedGiveCurrency?.code
         }}</ng-template>
       </app-input>
-      <p class="additional-info">
-        <span *ngIf="selectedGiveCurrency?.min">
-          {{ "mainForm.min" | translate }}:
-          {{ selectedGiveCurrency?.min + " " + selectedGiveCurrency?.code }}
-        </span>
-        <span *ngIf="selectedGiveCurrency?.max">
-           {{ "mainForm.max" | translate }}:
-          {{ selectedGiveCurrency?.max + " " + selectedGiveCurrency?.code }}
-        </span>
-        <span *ngIf="selectedGetCurrency">
-          1
-          {{ selectedGiveCurrency?.code }} =
-          {{ selectedGetCurrency?.rate + " " + selectedGetCurrency?.code }}
-        </span>
+      <p
+        *ngIf="
+          selectedGiveCurrency?.min &&
+          selectedGiveCurrency?.max &&
+          selectedGetCurrency
+        "
+        class="additional-info"
+      >
+        {{ "mainForm.min" | translate }}:
+        {{ selectedGiveCurrency?.min + " " + selectedGiveCurrency?.code }}
+        {{ "mainForm.max" | translate }}:
+        {{ selectedGiveCurrency?.max + " " + selectedGiveCurrency?.code }} 1
+        {{ selectedGiveCurrency?.code }} =
+        {{ selectedGetCurrency?.rate + " " + selectedGetCurrency?.code }}
       </p>
       <app-input
         [placeholder]="'Email'"
@@ -142,6 +142,10 @@
       <p *ngIf="selectedGiveCurrency?.message" class="additional-info">
         {{ selectedGiveCurrency?.message }}
       </p>
+      <app-input
+        [placeholder]="'mainForm.fullName' | translate"
+        [formControlName]="'fullName'"
+      ></app-input>
       <app-input
         [placeholder]="
           'mainForm.cardNumber'
